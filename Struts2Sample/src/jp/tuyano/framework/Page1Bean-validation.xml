@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE validators PUBLIC
+"-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="string">
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">10</param>
+			<message>${minLength}から${maxLength}までの文字数で入力ください。
+			</message>
+		</field-validator>
+	</field>
+	<field name="mail">
+		<field-validator type="email">
+			<message>正しいメールアドレスを入力してください。</message>
+		</field-validator>
+		<field-validator type="requiredstring">
+			<message>入力は必須です。</message>
+		</field-validator>
+	</field>
+	<field name="number">
+		<field-validator type="int">
+			<param name="min">0</param>
+			<param name="max">100</param>
+			<message>${min}から${max}までの整数を入力ください。</message>
+		</field-validator>
+		<field-validator type="required">
+			<message>入力は必須です。</message>
+		</field-validator>
+	</field>
+</validators>
